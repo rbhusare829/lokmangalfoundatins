@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "npm --prefix backend install && npm --prefix frontend install --include=dev && npm --prefix frontend run build",
+    "build": "npm --prefix backend install && npm --prefix backend rebuild sqlite3 --build-from-source && npm --prefix frontend install --include=dev && npm --prefix frontend run build",
     "start": "npm --prefix backend start"
   }
 }
