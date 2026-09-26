@@ -1,3 +1,4 @@
+import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 import { Sequelize } from "sequelize";
@@ -9,12 +10,27 @@ const defaultStorage = path.resolve(__dirname, "../../data/dev.sqlite");
 
 const dialect = process.env.DB_DIALECT || "sqlite";
 
-// Managed MySQL providers (Aiven, PlanetScale, Railway, ...) require TLS and
-// reject plain connections outright, while a local/self-hosted MySQL usually
-// has no cert to verify -- so this is an explicit opt-in via DB_SSL rather
-// than inferred, matching the TRUST_PROXY/STORAGE_DRIVER pattern elsewhere.
 const dbSslEnv = (process.env.DB_SSL || "").trim().toLowerCase();
 const useDbSsl = dbSslEnv && dbSslEnv !== "0" && dbSslEnv !== "false";
+
+let resolvedStorage = defaultStorage;
+if (process.env.DB_STORAGE) {
+  const directPath = path.resolve(process.env.DB_STORAGE);
+  const backendRelPath = path.resolve(__dirname, "../../", process.env.DB_STORAGE);
+  if (fs.existsSync(directPath)) {
+    resolvedStorage = directPath;
+  } else if (fs.existsSync(backendRelPath)) {
+    resolvedStorage = backendRelPath;
+  } else {
+    resolvedStorage = directPath;
+  }
+}
+
+if (dialect === "sqlite") {
+  try {
+    fs.mkdirSync(path.dirname(resolvedStorage), { recursive: true });
+  } catch (_) {}
+}
 
 export const sequelize =
   dialect === "mysql"
@@ -32,7 +48,6 @@ export const sequelize =
       )
     : new Sequelize({
         dialect: "sqlite",
-        storage: process.env.DB_STORAGE ? path.resolve(process.env.DB_STORAGE) : defaultStorage,
+        storage: resolvedStorage,
         logging: false,
       });
-
