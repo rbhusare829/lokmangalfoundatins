@@ -19,6 +19,7 @@ import { useApi } from "../lib/useApi.js";
 import { CATEGORY_TO_PROJECT_SLUG } from "../lib/projectGalleryCategories.js";
 import PageBanner from "../components/ui/PageBanner.jsx";
 import { LoadingState, ErrorState } from "../components/ui/AsyncState.jsx";
+import { formatYouTubeEmbedUrl } from "../lib/format.js";
 
 const DEVANAGARI_DIGITS = ["०", "१", "२", "३", "४", "५", "६", "७", "८", "९"];
 function toMarathiNumeral(n) {
@@ -349,10 +350,11 @@ export default function Gallery() {
                     {activeAlbum.project?.videoUrl && (
                       <div className="mt-6 aspect-video w-full max-w-2xl overflow-hidden rounded-2xl shadow-md">
                         <iframe
-                          src={activeAlbum.project.videoUrl}
+                          src={formatYouTubeEmbedUrl(activeAlbum.project.videoUrl)}
                           title={activeAlbum.title}
                           className="h-full w-full"
-                          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                          referrerPolicy="strict-origin-when-cross-origin"
                           allowFullScreen
                         />
                       </div>

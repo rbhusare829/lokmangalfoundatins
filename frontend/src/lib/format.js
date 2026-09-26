@@ -29,3 +29,24 @@ export function formatDate(value, lang, options = { day: "numeric", month: "long
   if (!value) return "";
   return new Intl.DateTimeFormat(lang === "mr" ? "mr-IN" : "en-IN", options).format(parseDateOnly(value));
 }
+
+// Convert any YouTube link (watch, share, or embed) into a secure youtube-nocookie embed link
+export function formatYouTubeEmbedUrl(url) {
+  if (!url || typeof url !== "string") return "";
+  const trimmed = url.trim();
+  if (!trimmed) return "";
+
+  const match = trimmed.match(
+    /(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=)|youtube-nocookie\.com\/embed\/)([a-zA-Z0-9_-]{11})/
+  );
+
+  if (match && match[1]) {
+    return `https://www.youtube-nocookie.com/embed/${match[1]}?rel=0`;
+  }
+
+  if (trimmed.includes("youtube.com/embed/")) {
+    return trimmed.replace("youtube.com/embed/", "youtube-nocookie.com/embed/");
+  }
+
+  return trimmed;
+}

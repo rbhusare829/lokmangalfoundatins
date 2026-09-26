@@ -52,7 +52,7 @@ This means that providing meals to 550 senior citizens costs a total of ₹82500
 The initiative provides needy senior citizens with regular support for their daily meals. With financial support from individuals and organisations, this initiative can be extended to reach many more senior citizens in need.`,
     statMr: "५५० लाभार्थी | ₹८,२५,००० प्रति महिना",
     statEn: "550 Beneficiaries | ₹8,25,000/mo",
-    videoUrl: "https://www.youtube.com/embed/xqe6JKzo11I?rel=0",
+    videoUrl: "https://www.youtube-nocookie.com/embed/xqe6JKzo11I?rel=0",
   },
   {
     sortOrder: 2,
@@ -95,7 +95,7 @@ The initiative has achieved positive results wherever it has been implemented. I
 Seeing the happiness on the faces of farmers who feed our society through their hard work is a source of satisfaction for us. Our goal is to address water-related challenges across as many areas as possible and ensure that farmers have adequate water available for agriculture.`,
     statMr: "१० लाख घनमीटर गाळ | १०० कोटी लिटर साठा",
     statEn: "10 Lakh cu.m Desilted | 100 Cr Litres Capacity",
-    videoUrl: "https://www.youtube.com/embed/DyXdiolI1TI?rel=0",
+    videoUrl: "https://www.youtube-nocookie.com/embed/DyXdiolI1TI?rel=0",
   },
   {
     sortOrder: 3,
@@ -144,7 +144,7 @@ There is a beautiful thought — “Education builds confidence, and confidence 
 Our aim is to nurture this confidence in students who have the determination to achieve something meaningful in life and fulfil their dreams. Providing them with the right support at the right time for a brighter future is our commitment.`,
     statMr: "२२५ विद्यार्थी दत्तक | ₹९०,९९,२२६ निधी",
     statEn: "225 Students Adopted | ₹90,99,226 Scholarship",
-    videoUrl: "https://www.youtube.com/embed/Mi-1-IPWPmk?rel=0",
+    videoUrl: "https://www.youtube-nocookie.com/embed/Mi-1-IPWPmk?rel=0",
   },
   {
     sortOrder: 4,
@@ -187,7 +187,7 @@ Promoting communal harmony and helping to curb the practice of dowry are among t
 Under this initiative, 48 Community Marriage Ceremonies have been conducted so far, with a total of 3,221 couples getting married. This includes 2,508 Hindu, 681 Buddhist, 21 Muslim, 7 Jain and 4 Christian couples.`,
     statMr: "४८ सोहळे | ३,२२१ जोडपे विवाहबद्ध",
     statEn: "48 Ceremonies | 3,221 Couples Married",
-    videoUrl: "https://www.youtube.com/embed/pooqDuktVeM?rel=0",
+    videoUrl: "https://www.youtube-nocookie.com/embed/pooqDuktVeM?rel=0",
   },
   {
     sortOrder: 5,

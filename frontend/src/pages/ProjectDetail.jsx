@@ -16,6 +16,7 @@ import { asset } from "../lib/assetUrl.js";
 import { PROJECT_GALLERY_CATEGORY } from "../lib/projectGalleryCategories.js";
 import PageBanner from "../components/ui/PageBanner.jsx";
 import { LoadingState, ErrorState } from "../components/ui/AsyncState.jsx";
+import { formatYouTubeEmbedUrl } from "../lib/format.js";
 
 const FALLBACK_SLIDER_IMAGES = {
   "lokmangal-annapurna-yojana": "slider/annapoorna-yojana.jpg",
@@ -177,10 +178,11 @@ export default function ProjectDetail({ slug: propSlug }) {
                 </div>
                 <div className="aspect-video w-full overflow-hidden rounded-2xl shadow-md">
                   <iframe
-                    src={project.videoUrl}
+                    src={formatYouTubeEmbedUrl(project.videoUrl)}
                     title={title}
                     className="h-full w-full"
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
                     allowFullScreen
                   />
                 </div>

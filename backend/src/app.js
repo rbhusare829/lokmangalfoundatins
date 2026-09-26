@@ -40,12 +40,23 @@ app.use(
         // CSP has no frame-src, which falls back to default-src 'self' and
         // silently blocks them once the built frontend is served from this
         // same Express origin in production.
-        frameSrc: ["'self'", "https://www.youtube.com"],
+        frameSrc: [
+          "'self'",
+          "https://www.youtube.com",
+          "https://www.youtube-nocookie.com",
+        ],
         // The Saptahik PDF reader (pdf.js) compiles WebAssembly decoders for
         // JPEG 2000 images and ICC colour profiles found in print PDFs.
         scriptSrc: ["'self'", "'wasm-unsafe-eval'"],
+        imgSrc: ["'self'", "data:", "blob:", "https:", "http:"],
+        mediaSrc: ["'self'", "data:", "blob:", "https:", "http:"],
       },
     },
+    // YouTube player embeds require strict-origin-when-cross-origin so YouTube can
+    // verify the embedding domain. Helmet defaults to no-referrer which triggers Error 153.
+    referrerPolicy: { policy: "strict-origin-when-cross-origin" },
+    crossOriginOpenerPolicy: { policy: "same-origin-allow-popups" },
+    crossOriginResourcePolicy: false,
   })
 );
 app.use(

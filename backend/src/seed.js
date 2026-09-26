@@ -103,7 +103,7 @@ const PROJECTS = [
     ].join("\n\n"),
     statEn: "Beneficiaries: 550",
     statMr: "लाभार्थी : ५५०",
-    videoUrl: "https://www.youtube.com/embed/xqe6JKzo11I?rel=0",
+    videoUrl: "https://www.youtube-nocookie.com/embed/xqe6JKzo11I?rel=0",
     image: "slider/annapoorna-yojana.jpg",
   },
   {
@@ -137,7 +137,7 @@ const PROJECTS = [
     ].join("\n\n"),
     statEn: "Covered: 5000 Sq. km.",
     statMr: "व्याप्ती : ५००० चौ. किमी.",
-    videoUrl: "https://www.youtube.com/embed/DyXdiolI1TI?rel=0",
+    videoUrl: "https://www.youtube-nocookie.com/embed/DyXdiolI1TI?rel=0",
     image: "slider/jalsandharan-project.jpg",
   },
   {
@@ -164,7 +164,7 @@ const PROJECTS = [
     ].join("\n\n"),
     statEn: "Helped: 225",
     statMr: "लाभार्थी : २२५",
-    videoUrl: "https://www.youtube.com/embed/Mi-1-IPWPmk?rel=0",
+    videoUrl: "https://www.youtube-nocookie.com/embed/Mi-1-IPWPmk?rel=0",
     image: "slider/vidyadaan-yojana.jpg",
   },
   {
@@ -201,7 +201,7 @@ const PROJECTS = [
     ].join("\n\n"),
     statEn: "Married: 3221 Couples",
     statMr: "विवाहित जोडपे : ३२२१",
-    videoUrl: "https://www.youtube.com/embed/pooqDuktVeM?rel=0",
+    videoUrl: "https://www.youtube-nocookie.com/embed/pooqDuktVeM?rel=0",
     image: "slider/samudayik-vivah-sohala.jpg",
   },
 ];
