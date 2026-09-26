@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Marathi&family=Poppins:wght@400;500;600;700;800&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-brand-green-primary: #14432a;
+  --color-brand-green-medium: #1f6b3d;
+  --color-brand-orange-accent: #ea8b22;
+  --color-orange-btn-text: #4a2f0c;
+  --color-light-orange-tint: #fdeedc;
+  --color-orange-icon: #9a5a0f;
+  --color-light-green-tint: #e3f0e6;
+  --color-green-icon: #14432a;
+  --color-page-bg: #faf8f3;
+  --color-card-bg: #ffffff;
+  --color-main-text: #2b2b2b;
+  --color-secondary-text: #5f5e5a;
+  --color-footer-text: #e3f0e6;
+  --color-footer-muted: #a8d0b4;
+
+  --color-quote-bg: #b5502e;
+  --color-quote-text: #f7e9d6;
+  --color-quote-accent: #ffd285;
+
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-marathi: "Tiro Devanagari Marathi", "Poppins", ui-sans-serif, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-page-bg);
+  color: var(--color-main-text);
+  font-family: var(--font-sans);
+}
+
+[data-lang="mr"] {
+  font-family: var(--font-marathi);
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}

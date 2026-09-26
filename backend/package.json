@@ -1,0 +1,37 @@
+{
+  "name": "lokmangal-foundation-backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js",
+    "seed": "node src/seed.js",
+    "seed:content": "node src/seedContent.js",
+    "migrate:s3": "node src/migrateUploadsToS3.js",
+    "migrate:mysql": "node src/migrateSqliteToMysql.js",
+    "seed:23": "node src/update23Initiatives.js"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.1135.0",
+    "bcrypt": "^5.1.1",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.2.0",
+    "express-validator": "^7.0.1",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^2.0.0",
+    "multer-s3": "^3.0.1",
+    "mysql2": "^3.10.0",
+    "node-cron": "^3.0.3",
+    "nodemailer": "^10.0.0",
+    "sequelize": "^6.37.3",
+    "sqlite3": "^6.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
