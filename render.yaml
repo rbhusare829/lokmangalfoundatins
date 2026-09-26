@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: lokmangal-foundation
+    env: node
+    plan: free
+    buildCommand: npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: JWT_SECRET
+        generateValue: true
+      - key: DB_DIALECT
+        value: sqlite
+      - key: DB_STORAGE
+        value: ./data/dev.sqlite
+      - key: CORS_ORIGIN
+        value: "*"

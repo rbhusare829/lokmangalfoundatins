@@ -10,7 +10,8 @@
     "seed:content": "node src/seedContent.js",
     "migrate:s3": "node src/migrateUploadsToS3.js",
     "migrate:mysql": "node src/migrateSqliteToMysql.js",
-    "seed:23": "node src/update23Initiatives.js"
+    "seed:23": "node src/update23Initiatives.js",
+    "seed:all": "node src/seed.js && node src/update23Initiatives.js && node src/seedContent.js"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.1135.0",

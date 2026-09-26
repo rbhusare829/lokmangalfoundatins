@@ -12,11 +12,7 @@ frontend/dist/
 backend/.env
 .env.local
 
-# Databases & local logs
-data/
-backend/data/
-*.sqlite
-*.sqlite3
+# Logs
 *.log
 
 # OS generated
