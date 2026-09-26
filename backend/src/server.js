@@ -49,8 +49,8 @@ async function start() {
     await sequelize.sync();
     console.log(`Database connected (${sequelize.getDialect()})`);
 
-    app.listen(PORT, () => {
-      console.log(`API listening on http://localhost:${PORT}`);
+    app.listen(PORT, "0.0.0.0", () => {
+      console.log(`API listening on http://0.0.0.0:${PORT}`);
     });
   } catch (err) {
     console.error("Failed to start server:", err);
